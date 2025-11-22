@@ -1,0 +1,40 @@
+-- Criando o banco de dados
+CREATE DATABASE contato_portfolio;
+
+-- Usando o banco de dados criado
+USE contato_portfolio;
+
+-- Criando a tabela mensagens
+CREATE TABLE mensagens (
+    id INT AUTO_INCREMENT PRIMARY KEY,   -- Identificador único para cada mensagem
+    nome VARCHAR(100) NOT NULL,           -- Nome do visitante
+    telefone VARCHAR(25),                 -- Telefone do visitante
+    email VARCHAR(150) NOT NULL,          -- E-mail do visitante
+    empresa VARCHAR(100),                 -- Empresa ou instituição (opcional)
+    assunto VARCHAR(200) NOT NULL,        -- Assunto da mensagem
+    mensagem TEXT NOT NULL,               -- Corpo da mensagem
+    data_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Data e hora do envio da mensagem
+);
+
+-- Inserir 20 registros de exemplo (simulação de dados)
+INSERT INTO mensagens (nome, telefone, email, empresa, assunto, mensagem) VALUES
+('João Silva', '(11) 99999-9999', 'joao@exemplo.com', 'Empresa A', 'Dúvida sobre o portfólio', 'Gostaria de saber mais sobre os projetos que você desenvolveu.'),
+('Maria Souza', '(21) 98888-8888', 'maria@exemplo.com', 'Empresa B', 'Consulta de trabalho', 'Tenho interesse em saber sobre as vagas disponíveis.'),
+('Carlos Pereira', '(31) 97777-7777', 'carlos@exemplo.com', 'Empresa C', 'Proposta de parceria', 'Gostaria de discutir uma possível parceria entre nossas empresas.'),
+('Luciana Lima', '(41) 96666-6666', 'luciana@exemplo.com', 'Empresa D', 'Informações sobre cursos', 'Estou procurando por cursos de desenvolvimento web.'),
+('Pedro Santos', '(51) 95555-5555', 'pedro@exemplo.com', 'Empresa E', 'Suporte técnico', 'Estou com dificuldades para integrar a API.'),
+('Ana Costa', '(61) 94444-4444', 'ana@exemplo.com', 'Empresa F', 'Dúvida sobre a funcionalidade do site', 'O site não está carregando corretamente.'),
+('Lucas Martins', '(71) 93333-3333', 'lucas@exemplo.com', 'Empresa G', 'Feedback do projeto', 'Adorei os projetos, mas gostaria de sugerir melhorias na interface.'),
+('Juliana Oliveira', '(81) 92222-2222', 'juliana@exemplo.com', 'Empresa H', 'Solicitação de informações', 'Gostaria de saber mais sobre as tecnologias que você utiliza nos projetos.'),
+('Felipe Almeida', '(91) 91111-1111', 'felipe@exemplo.com', 'Empresa I', 'Dúvida sobre implementação', 'Preciso de ajuda com a implementação de um recurso no meu site.'),
+('Patrícia Silva', '(11) 90000-0000', 'patricia@exemplo.com', 'Empresa J', 'Solicitação de orçamento', 'Estou precisando de um orçamento para o desenvolvimento de um site institucional.'),
+('Roberto Souza', '(21) 98877-7788', 'roberto@exemplo.com', 'Empresa K', 'Informações sobre o portfólio', 'Gostaria de ver mais exemplos de projetos anteriores.'),
+('Fernanda Rocha', '(31) 97766-6677', 'fernanda@exemplo.com', 'Empresa L', 'Consulta sobre sistemas', 'Quero saber mais sobre sistemas de gerenciamento de dados.'),
+('Rafael Lima', '(41) 96655-5566', 'rafael@exemplo.com', 'Empresa M', 'Proposta de colaboração', 'Estou interessado em colaborar em projetos futuros.'),
+('Juliana Costa', '(51) 95544-4477', 'juliana@exemplo.com', 'Empresa N', 'Sugestões para o site', 'Sugiro que a navegação seja mais intuitiva.'),
+('Renato Alves', '(61) 94433-3344', 'renato@exemplo.com', 'Empresa O', 'Dúvida sobre funcionalidades', 'Quero saber como posso utilizar o sistema de forma mais eficiente.'),
+('Bruna Souza', '(71) 93322-2211', 'bruna@exemplo.com', 'Empresa P', 'Suporte a integração', 'Estou com dificuldades para integrar o sistema com a plataforma externa.'),
+('Tatiane Lima', '(81) 92211-1100', 'tatiane@exemplo.com', 'Empresa Q', 'Solicitação de informações', 'Preciso de mais informações sobre a integração do sistema com API externa.'),
+('Gustavo Oliveira', '(91) 91100-0011', 'gustavo@exemplo.com', 'Empresa R', 'Proposta de marketing', 'Gostaria de discutir uma proposta de marketing para o seu portfólio.'),
+('Larissa Costa', '(11) 90000-1234', 'larissa@exemplo.com', 'Empresa S', 'Consulta de produto', 'Gostaria de saber mais sobre a funcionalidade do produto XYZ.'),
+('Eduardo Martins', '(21) 98866-6677', 'eduardo@exemplo.com', 'Empresa T', 'Parceria de negócios', 'Estou interessado em uma parceria comercial entre nossas empresas.');
